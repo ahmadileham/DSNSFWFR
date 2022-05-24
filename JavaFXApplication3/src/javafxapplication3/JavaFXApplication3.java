@@ -4,12 +4,16 @@
  */
 package javafxapplication3;
 
+//import java.awt.Image;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -19,25 +23,17 @@ import javafx.stage.Stage;
 public class JavaFXApplication3 extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello Worl!");
-            }
-        });
+    public void start(Stage stage)  {
+        Group root = new Group();
+        Scene scene = new Scene(root,Color.BLUEVIOLET);
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        Image icon = new Image("C:\\Users\\Ilham\\Desktop\\boco\\DSCF5079.jpg");
         
-        Scene scene = new Scene(root, 300, 250);
+        stage.getIcons().add(icon);
+        stage.setTitle("MAK KAU");
         
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        stage.show();
+        
     }
     // boo babid aadsdsdadsada
     /**
