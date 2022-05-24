@@ -27,9 +27,9 @@ public class JavaFXApplication3 extends Application {
         Group root = new Group();
         Scene scene = new Scene(root,Color.BLUEVIOLET);
         
-        Image icon = new Image("C:\\Users\\Ilham\\Desktop\\boco\\DSCF5079.jpg");
+        //Image icon = new Image("C:\\Users\\Ilham\\Desktop\\boco\\DSCF5079.jpg");
         
-        stage.getIcons().add(icon);
+        //stage.getIcons().add(icon);
         stage.setTitle("MAK KAU");
         
         stage.show();
