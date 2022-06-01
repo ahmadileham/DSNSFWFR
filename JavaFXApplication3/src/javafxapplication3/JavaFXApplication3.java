@@ -8,13 +8,19 @@ package javafxapplication3;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  *
@@ -23,18 +29,15 @@ import javafx.stage.Stage;
 public class JavaFXApplication3 extends Application {
     
     @Override
-    public void start(Stage stage)  {
-        Group root = new Group();
-        Scene scene = new Scene(root,Color.BLUEVIOLET);
-        
-        //Image icon = new Image("C:\\Users\\Ilham\\Desktop\\boco\\DSCF5079.jpg");
-        
-        //stage.getIcons().add(icon);
-        stage.setTitle("MAK KAU");
-        
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(JavaFXApplication3.class.getResource("makkau.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
         stage.show();
         
     }
+
     // boo babid aadsdsdadsada
     /**
      * @param args the command line arguments
