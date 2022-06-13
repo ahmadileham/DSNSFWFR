@@ -39,6 +39,7 @@ public class JavaFXApplication3 extends Application {
         confessions.push("i hate black people");
         confessions.push("i hate chinese people");
         confessions.push("i hate ilham people");
+        confessions.push("i hate BO people");
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFXApplication3.class.getResource("makkau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("HELLO MAK ILHAM!");
