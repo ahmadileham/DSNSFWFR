@@ -32,7 +32,7 @@ public class JavaFXApplication3 extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFXApplication3.class.getResource("makkau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
+        stage.setTitle("Hello mak ilham!");
         stage.setScene(scene);
         stage.show();
         
