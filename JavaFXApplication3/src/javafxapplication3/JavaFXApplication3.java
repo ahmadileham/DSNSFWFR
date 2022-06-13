@@ -21,18 +21,25 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+import java.util.*;
 /**
  *
- * @author Ilham
+ * @author DSNSFWFR
  */
 public class JavaFXApplication3 extends Application {
-    
+
+    public static Stack<String> confessions = new Stack<>();
+    public static Stack<String> confessionsTemp = new Stack<>();
     @Override
     public void start(Stage stage) throws Exception {
+        confessions.push("i have to confess... i am gay");
+        confessions.push("happy birthday ilham");
+        confessions.push("help me");
+        confessions.push("i love capang");
+        confessions.push("i hate black people");
         FXMLLoader fxmlLoader = new FXMLLoader(JavaFXApplication3.class.getResource("makkau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello mak ilham!");
+        stage.setTitle("HELLO MAK ILHAM!");
         stage.setScene(scene);
         stage.show();
         
