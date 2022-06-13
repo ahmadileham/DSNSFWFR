@@ -23,9 +23,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 /**
- *
- * @author DSNSFWFR
- */
+ * @author DSNSFWFR ( ILHAM , BO , SHAFIQ , CAPANG )
+ **/
 public class JavaFXApplication3 extends Application {
 
     public static Stack<String> confessions = new Stack<>();
