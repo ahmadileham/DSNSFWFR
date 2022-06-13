@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.*;
 /**
- * @author DSNSFWFR ( ILHAM , BO , SHAFIQ , CAPANG )
+ * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
  **/
 public class JavaFXApplication3 extends Application {
 
