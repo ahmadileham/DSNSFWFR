@@ -22,7 +22,7 @@
       <children>
          <Button layoutX="487.0" layoutY="37.0" onAction="#onNextButtonClick" text="Next" />
          <Button layoutX="63.0" layoutY="33.0" onAction="#onBackButtonClick" prefHeight="38.0" prefWidth="59.0" text="Back" />
-         <Button fx:id="replyButton" layoutX="276.0" layoutY="37.0" mnemonicParsing="false" onAction="#replyClick" text="Reply" />
+         <Button fx:id="replyButton" layoutX="276.0" layoutY="37.0" mnemonicParsing="false" onAction="#switchScene" text="Reply" />
       </children>
    </Pane>
 </VBox>
