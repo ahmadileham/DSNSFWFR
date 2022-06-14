@@ -1,23 +1,51 @@
 package javafxapplication3;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Confession {
     private int ID;
     private String confession;
-    private Date date;
+    private String date;
     private static int i=1;
 
     public Confession(String confession) {
         this.ID = i;
         this.confession = confession;
-        date = new Date();
+        String pattern = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        date = simpleDateFormat.format(new Date());
         i++;
     }
 
-    public Confession(String confession, Date date) {
+    public Confession(int ID,String confession, String date) {
+        this.ID = ID;
         this.confession = confession;
+        this.date = date;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public String getConfession() {
+        return confession;
+    }
+
+    public void setConfession(String confession) {
+        this.confession = confession;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
         this.date = date;
     }
 

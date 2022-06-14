@@ -22,6 +22,8 @@
       <children>
          <Button layoutX="487.0" layoutY="37.0" onAction="#onNextButtonClick" text="Next" />
          <Button layoutX="63.0" layoutY="33.0" onAction="#onBackButtonClick" prefHeight="38.0" prefWidth="59.0" text="Back" />
+         <Button fx:id="replyButton" layoutX="182.0" layoutY="33.0" mnemonicParsing="false" onAction="#replyScene" text="Reply" />
+         <Button fx:id="uploadButton" layoutX="292.0" layoutY="33.0" mnemonicParsing="false" onAction="#submitScene" text="Upload confession" />
       </children>
    </Pane>
 </VBox>
