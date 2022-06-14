@@ -27,14 +27,14 @@ public class Controller {
     @FXML
     protected void onNextButtonClick() {
 
-        confessionPrint.setText(JavaFXApplication3.confessions.peek());
+        confessionPrint.setText(JavaFXApplication3.confessions.peek().toString());
         JavaFXApplication3.confessionsTemp.push(JavaFXApplication3.confessions.pop());
     }
 
     @FXML
     protected void onBackButtonClick() {
 
-        confessionPrint.setText(JavaFXApplication3.confessionsTemp.peek());
+        confessionPrint.setText(JavaFXApplication3.confessionsTemp.peek().toString());
         JavaFXApplication3.confessions.push(JavaFXApplication3.confessionsTemp.pop());
 
     }
