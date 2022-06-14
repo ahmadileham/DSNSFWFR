@@ -38,6 +38,7 @@ public class JavaFXApplication3 extends Application {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
+                // to fetch data from database
             }
         } catch (
                 SQLException e) {
