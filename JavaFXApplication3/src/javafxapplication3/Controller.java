@@ -60,6 +60,18 @@ public class Controller {
     }
 
     public void mainScene(javafx.event.ActionEvent event) throws IOException {
+        try  {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Statement myStmt = connection.createStatement();
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
+
+            while (myRs.next()) {
+                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
+            }
+        } catch (
+                SQLException e) {
+            throw new IllegalStateException("Cannot connect the database!", e);
+        }
         root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -69,12 +81,18 @@ public class Controller {
 
     public void uploadConfession(ActionEvent event) {
         Confession a = new Confession(confessionTextBox.getText());
-        System.out.println(confessionTextBox.getText());
-        System.out.println(a.toString());
+        int ID = 0;
+
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
-            myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values("+a.getID()+",'"+a.getConfession()+"','"+a.getDate()+"')");
+
+            Statement myStmt2 = connection.createStatement();
+            ResultSet myRs = myStmt2.executeQuery("SELECT * FROM not_approve ORDER BY confessionID DESC LIMIT 1");
+            while(myRs.next()) {
+                ID = myRs.getInt("confessionID") + 1;
+            }
+            myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values("+ID+",'"+a.getConfession()+"','"+a.getDate()+"')");
 
 
         } catch (
