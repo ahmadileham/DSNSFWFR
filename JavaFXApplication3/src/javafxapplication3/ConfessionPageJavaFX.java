@@ -27,7 +27,7 @@ public class ConfessionPageJavaFX extends Application {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
-                // to fetch data from database
+                confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
             }
         } catch (
                 SQLException e) {
