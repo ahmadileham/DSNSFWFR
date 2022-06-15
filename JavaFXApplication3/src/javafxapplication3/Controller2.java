@@ -61,7 +61,7 @@ public class Controller2 {
 //            empty.setText("DO NOT LEAVE TEXTBOX EMPTY");
         } else {
             try {
-                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "18102002");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
                 Statement myStmt = connection.createStatement();
                 Statement myStmt2 = connection.createStatement();
                 Statement myStmt3 = connection.createStatement();
