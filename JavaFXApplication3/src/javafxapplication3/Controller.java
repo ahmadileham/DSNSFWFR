@@ -2,7 +2,6 @@ package javafxapplication3;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.*;
@@ -10,7 +9,7 @@ import javafx.scene.*;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.*;
+
 public class Controller {
 
     private Stage stage;
@@ -29,15 +28,15 @@ public class Controller {
     @FXML
     protected void onNextButtonClick() {
 
-        confessionPrint.setText(JavaFXApplication3.confessions.peek().toString());
-        JavaFXApplication3.confessionsTemp.push(JavaFXApplication3.confessions.pop());
+        confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
     }
 
     @FXML
     protected void onBackButtonClick() {
 
-        confessionPrint.setText(JavaFXApplication3.confessionsTemp.peek().toString());
-        JavaFXApplication3.confessions.push(JavaFXApplication3.confessionsTemp.pop());
+        confessionPrint.setText(ConfessionPageJavaFX.confessionsTemp.peek().toString());
+        ConfessionPageJavaFX.confessions.push(ConfessionPageJavaFX.confessionsTemp.pop());
 
     }
 

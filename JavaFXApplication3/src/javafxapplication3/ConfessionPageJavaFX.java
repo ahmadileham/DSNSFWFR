@@ -6,27 +6,16 @@ package javafxapplication3;
 
 //import java.awt.Image;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.sql.*;
 import java.util.*;
 /**
  * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
  **/
-public class JavaFXApplication3 extends Application {
+public class ConfessionPageJavaFX extends Application {
 
     public static Stack<Confession> confessions = new Stack<>();
     public static Stack<Confession> confessionsTemp = new Stack<>();
@@ -51,7 +40,7 @@ public class JavaFXApplication3 extends Application {
 //        confessions.push("i hate chinese people");
 //        confessions.push("i hate ilham people");
 //        confessions.push("i hate BO people");
-        FXMLLoader fxmlLoader = new FXMLLoader(JavaFXApplication3.class.getResource("makkau.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ConfessionPageJavaFX.class.getResource("makkau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("HELLO MAK ILHAM!");
         stage.setScene(scene);
