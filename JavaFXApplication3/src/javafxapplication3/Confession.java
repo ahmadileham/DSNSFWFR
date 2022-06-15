@@ -8,15 +8,12 @@ public class Confession {
     private int ID;
     private String confession;
     private String date;
-    private static int i=1;
 
     public Confession(String confession) {
-        this.ID = i;
         this.confession = confession;
         String pattern = "yyyy-MM-dd HH:mm:ss";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         date = simpleDateFormat.format(new Date());
-        i++;
     }
 
     public Confession(int ID,String confession, String date) {
