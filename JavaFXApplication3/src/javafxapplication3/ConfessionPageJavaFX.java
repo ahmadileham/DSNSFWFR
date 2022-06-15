@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 import java.util.*;
+import javafx.scene.image.Image;
 /**
  * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
  **/
@@ -45,6 +46,8 @@ public class ConfessionPageJavaFX extends Application {
 //        confessions.push("i hate BO people");
         FXMLLoader fxmlLoader = new FXMLLoader(ConfessionPageJavaFX.class.getResource("makkau.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        Image icon = new Image("javafxapplication3\\shafiq.png");
+        stage.getIcons().add(icon);
         stage.setTitle("HELLO MAK ILHAM!");
         stage.setScene(scene);
         stage.show();
