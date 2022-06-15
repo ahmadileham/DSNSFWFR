@@ -10,7 +10,9 @@ import javafx.scene.*;
 
 import java.io.IOException;
 import java.sql.*;
-
+/**
+ * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
+ **/
 public class Controller {
 
     private Stage stage;
