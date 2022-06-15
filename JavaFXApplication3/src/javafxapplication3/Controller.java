@@ -27,15 +27,22 @@ public class Controller {
     @FXML
     private TextArea confessionPrint;
 
+
+    @FXML
+    private TextField messageReply;
+
     public Controller() {
     }
 
+    public void initialize(){
+        confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
+    }
 
     @FXML
     protected void onNextButtonClick() {
 
-        confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
         ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
+        confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
     }
 
     @FXML
@@ -50,11 +57,16 @@ public class Controller {
 
 
     public void replyScene(javafx.event.ActionEvent event) throws IOException {
+
+
         root = FXMLLoader.load(getClass().getResource("makkau2.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+
+
     }
 
     public void submitScene(javafx.event.ActionEvent event) throws IOException {
