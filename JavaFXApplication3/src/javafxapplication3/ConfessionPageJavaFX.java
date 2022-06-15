@@ -48,7 +48,7 @@ public class ConfessionPageJavaFX extends Application {
         stage.show();
         
     }
-
+    // fuck ur mother cibai lancau
     // boo babid aadsdsdadsada
     public static void main(String[] args) {
         launch(args);
