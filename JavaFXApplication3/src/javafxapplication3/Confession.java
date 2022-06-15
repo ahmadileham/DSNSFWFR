@@ -3,7 +3,9 @@ package javafxapplication3;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
-
+/**
+ * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
+ **/
 public class Confession {
     private int ID;
     private String confession;
