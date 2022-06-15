@@ -20,7 +20,7 @@
                <Font name="Roboto Bold" size="32.0" />
             </font>
          </Label>
-         <Button layoutX="520.0" layoutY="37.0" mnemonicParsing="false" text="searchion" />
+         <Button fx:id="searchButton" layoutX="520.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchScene" text="searchion" />
       </children>
    </Pane>
    <TextArea fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" />

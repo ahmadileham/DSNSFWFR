@@ -17,6 +17,8 @@ import java.util.*;
  **/
 public class ConfessionPageJavaFX extends Application {
 
+    public static Stack<Confession> confessionsSearch = new Stack<>();
+    public static Stack<Confession> confessionsSearchTemp = new Stack<>();
     public static Stack<Confession> confessions = new Stack<>();
     public static Stack<Confession> confessionsTemp = new Stack<>();
     @Override
