@@ -1,7 +1,9 @@
 package javafxapplication3;
 
 import java.util.LinkedList;
-
+/**
+ * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
+ **/
 public class Queue<E> {
     LinkedList<E> list;
 
