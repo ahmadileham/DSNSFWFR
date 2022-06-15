@@ -39,7 +39,7 @@ public class Controller4 {
 
     public void mainScene(javafx.event.ActionEvent event) throws IOException {
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "18102002");
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
@@ -68,16 +68,16 @@ public class Controller4 {
         ConfessionPageJavaFX.confessionsSearchTemp.clear();
 
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "18102002");
             Statement myStmt = connection.createStatement();
             if(a.equals("Keyword")){
                 choice = "SELECT * FROM not_approve WHERE confession LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Confession ID")){
                 choice = "SELECT * FROM not_approve WHERE confessionID = "+searchText.getText();
             } else if(a.equals("Date")){
-                choice = "test";
+                choice = "SELECT * FROM not_approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Date & Time")){
-                choice = "test";
+                choice = "SELECT * FROM not_approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             }
 
             ResultSet myRs = myStmt.executeQuery(choice);
