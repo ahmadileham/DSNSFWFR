@@ -16,7 +16,7 @@
          </font>
       </Label>
       <Button layoutX="101.0" layoutY="336.0" mnemonicParsing="false" onAction="#approveScene" text="Approve New Confessions" />
-      <Button layoutX="56.0" layoutY="75.0" mnemonicParsing="false" text="Delete Existing Confessions" />
+      <Button layoutX="56.0" layoutY="75.0" mnemonicParsing="false" text="Delete Existing Confessions" onAction="#deleteScene" />
       <Button layoutX="217.0" layoutY="195.0" mnemonicParsing="false" onAction="#loginScene" prefHeight="36.0" prefWidth="110.0" text="Log Out" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="195.0" />
       <Button layoutX="416.0" layoutY="187.0" mnemonicParsing="false" text="Register new admin" onAction="#registerAdminScene"/>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">

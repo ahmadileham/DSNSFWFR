@@ -64,6 +64,6 @@ public class Confession {
                 "ID=" + ID +
                 "\n, confession='" + confession + '\'' +
                 "\n, date='"+date+'\''+
-                '\n';
+                "\n, reply_ID= " + reply_ID;
     }
 }

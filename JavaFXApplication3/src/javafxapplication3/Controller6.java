@@ -39,4 +39,12 @@ public class Controller6 {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void deleteScene(javafx.event.ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("makkau9.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

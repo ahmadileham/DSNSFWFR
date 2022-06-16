@@ -42,8 +42,6 @@ public class Controller3 {
                     ID = myRs.getInt("confessionID") + 1;
                 }
 
-
-
                 myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values("+ID+",'"+a.getConfession()+"','"+a.getDate()+"')");
 
 
