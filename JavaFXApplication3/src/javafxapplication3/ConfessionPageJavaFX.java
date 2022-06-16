@@ -29,10 +29,15 @@ public class ConfessionPageJavaFX extends Application {
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
+            Statement myStmt2 = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
+            ResultSet myRs2 = myStmt2.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
                 confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
+            }
+            while (myRs2.next()) {
+                notApprove.enqueue(new Confession(myRs2.getInt("confessionID"),myRs2.getString("confession"),myRs2.getString("date_post"),myRs2.getInt("reply_ID")));// to fetch data from database
             }
         } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
