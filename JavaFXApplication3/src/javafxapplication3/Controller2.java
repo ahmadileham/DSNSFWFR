@@ -37,7 +37,7 @@ public class Controller2 {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
-                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
+                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
             }
             myStmt.close();
             myRs.close();
@@ -78,7 +78,7 @@ public class Controller2 {
                 myRs = myStmt3.executeQuery("SELECT * FROM not_approve");
 
                 while (myRs.next()) {
-                    ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"), myRs.getString("confession"), myRs.getString("date_post")));// to fetch data from database
+                    ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"), myRs.getString("confession"), myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
                 }
 
                 myRs.close();

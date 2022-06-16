@@ -30,10 +30,9 @@ public class ConfessionPageJavaFX extends Application {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
-                confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
+                confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
             }
-        } catch (
-                SQLException e) {
+        } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
 //        confessions.push("i have to confess... i am gay");

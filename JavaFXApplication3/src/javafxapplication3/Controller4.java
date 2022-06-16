@@ -44,7 +44,7 @@ public class Controller4 {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
             while (myRs.next()) {
-                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
+                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }
             myStmt.close();
             myRs.close();
@@ -84,7 +84,7 @@ public class Controller4 {
 
 
             while (myRs.next()) {
-                ConfessionPageJavaFX.confessionsSearch.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post")));// to fetch data from database
+                ConfessionPageJavaFX.confessionsSearch.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }
 
             searchPrint.setText(ConfessionPageJavaFX.confessionsSearch.peek().toString());

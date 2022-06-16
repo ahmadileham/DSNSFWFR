@@ -2,19 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DialogPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller6">
    <children>
       <DialogPane />
-      <ImageView fitHeight="260.0" fitWidth="245.0" layoutX="226.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/capang.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="87.0" layoutY="315.0" mnemonicParsing="false" onAction="#mainScene" text="Home" />
+      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#adminLoginScene" text="Log Out" />
+      <TextArea fx:id="messageArea" editable="false" layoutX="87.0" layoutY="66.0" prefHeight="200.0" prefWidth="443.0" />
+      <Button layoutX="87.0" layoutY="312.0" mnemonicParsing="false" onAction="#rejectMessage" text="Reject" />
+      <Button layoutX="478.0" layoutY="312.0" mnemonicParsing="false" onAction="#approveMessage" text="Approve" />
    </children>
 </AnchorPane>
