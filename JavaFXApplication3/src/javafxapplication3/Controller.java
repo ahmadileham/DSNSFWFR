@@ -69,6 +69,19 @@ public class Controller {
 
     }
 
+    public void adminLoginScene(javafx.event.ActionEvent event) throws IOException {
+
+
+        root = FXMLLoader.load(getClass().getResource("makkau5.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+
+
+    }
+
     public void submitScene(javafx.event.ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("makkau3.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
