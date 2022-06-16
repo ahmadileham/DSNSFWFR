@@ -50,7 +50,7 @@ public class Controller3 {
                 myRs = myStmt3.executeQuery("SELECT * FROM not_approve");
 
                 while (myRs.next()) {
-                    ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
+                    ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
                 }
 
                 myRs.close();
@@ -75,8 +75,8 @@ public class Controller3 {
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
-            ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
-
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
+            ConfessionPageJavaFX.confessions.clear();
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }

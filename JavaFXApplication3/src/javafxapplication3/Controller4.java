@@ -41,8 +41,8 @@ public class Controller4 {
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
-            ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
-
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
+            ConfessionPageJavaFX.confessions.clear();
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }
@@ -71,13 +71,13 @@ public class Controller4 {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
             if(a.equals("Keyword")){
-                choice = "SELECT * FROM not_approve WHERE confession LIKE '%"+searchText.getText()+"%'";
+                choice = "SELECT * FROM approve WHERE confession LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Confession ID")){
-                choice = "SELECT * FROM not_approve WHERE confessionID = "+searchText.getText();
+                choice = "SELECT * FROM approve WHERE confessionID = "+searchText.getText();
             } else if(a.equals("Date")){
-                choice = "SELECT * FROM not_approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
+                choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Date & Time")){
-                choice = "SELECT * FROM not_approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
+                choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             }
 
             ResultSet myRs = myStmt.executeQuery(choice);

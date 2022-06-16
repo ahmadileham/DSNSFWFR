@@ -40,11 +40,11 @@ public class Controller6 {
     @FXML
     protected void approveMessage() {
 
-        Confession a = ConfessionPageJavaFX.confessions.pop();
+        Confession a = ConfessionPageJavaFX.notApprove.dequeue();
 
-        ConfessionPageJavaFX.confessionsTemp.push(a);
+        ConfessionPageJavaFX.notApproveTemp.enqueue(a);
 
-        messageArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
@@ -64,11 +64,11 @@ public class Controller6 {
     @FXML
     protected void rejectMessage() {
 
-        Confession a = ConfessionPageJavaFX.confessions.pop();
+        Confession a = ConfessionPageJavaFX.notApprove.dequeue();
 
-        ConfessionPageJavaFX.confessionsTemp.push(a);
+        ConfessionPageJavaFX.notApproveTemp.enqueue(a);
 
-        messageArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
 
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");

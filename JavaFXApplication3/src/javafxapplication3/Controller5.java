@@ -77,8 +77,8 @@ public class Controller5 {
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
-            ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
-
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
+            ConfessionPageJavaFX.confessions.clear();
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
             }

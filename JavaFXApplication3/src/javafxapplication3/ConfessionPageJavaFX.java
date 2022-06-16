@@ -22,12 +22,14 @@ public class ConfessionPageJavaFX extends Application {
     public static Stack<Confession> confessionsSearchTemp = new Stack<>();
     public static Stack<Confession> confessions = new Stack<>();
     public static Stack<Confession> confessionsTemp = new Stack<>();
+    public static Queue<Confession> notApprove = new Queue<>(); // these for not approve
+    public static Queue<Confession> notApproveTemp = new Queue<>();
     @Override
     public void start(Stage stage) throws Exception {
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
-            ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
 
             while (myRs.next()) {
                 confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
