@@ -23,11 +23,6 @@
             </font>
          </Label>
          <Button fx:id="searchButton" layoutX="520.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchScene" text="searchion" />
-         <ImageView fitHeight="145.0" fitWidth="114.0" layoutX="31.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="javafxapplication3/capang.png" />
-            </image>
-         </ImageView>
       </children>
    </Pane>
    <TextArea fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" />

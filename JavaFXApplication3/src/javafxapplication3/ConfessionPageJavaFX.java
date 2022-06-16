@@ -25,7 +25,7 @@ public class ConfessionPageJavaFX extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/confession_page_dsnsfwfr", "root", "Leham24");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
