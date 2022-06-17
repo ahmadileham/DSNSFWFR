@@ -82,26 +82,28 @@ public class Controller7 {
     @FXML
     protected void rejectMessage() {
 
-        Confession a = ConfessionPageJavaFX.notApprove.dequeue();
-
-        ConfessionPageJavaFX.notApproveTemp.enqueue(a);
-
-        if(!ConfessionPageJavaFX.notApprove.isEmpty()) {
-            messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
-
-            try {
+        if(!ConfessionPageJavaFX.notApprove.isEmpty()){
+            Confession a = ConfessionPageJavaFX.notApprove.dequeue();
+            ConfessionPageJavaFX.notApproveTemp.enqueue(a);
+            try  {
                 Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
-                Statement myStmt = connection.createStatement();
+                Statement myStmt2 = connection.createStatement();
 
-                myStmt.executeUpdate("DELETE FROM not_approve WHERE confessionID = " + a.getID());
+                myStmt2.executeUpdate("DELETE FROM not_approve WHERE confessionID = "+a.getID());
 
-                myStmt.close();
+                myStmt2.close();
+                if (!ConfessionPageJavaFX.notApprove.isEmpty()){
+                    messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
+                }else {
+                    messageArea.setText("No new posts.. mak kau liham");
+                }
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
             }
-        } else {
-            messageArea.setText("mak kau lialeaheaish");
+        }else {
+            messageArea.setText("No new posts.. mak kau liham");
+            return;
         }
     }
 }
