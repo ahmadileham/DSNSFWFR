@@ -32,7 +32,7 @@ public class Controller3 {
             //empty.setText("DO NOT LEAVE TEXTBOX EMPTY");
         } else{
             try  {
-                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+                Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
                 Statement myStmt = connection.createStatement();
                 Statement myStmt2 = connection.createStatement();
                 Statement myStmt3 = connection.createStatement();
@@ -71,7 +71,7 @@ public class Controller3 {
 
     public void mainScene(javafx.event.ActionEvent event) throws IOException {
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
             ConfessionPageJavaFX.confessions.clear();

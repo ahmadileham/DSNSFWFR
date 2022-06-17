@@ -27,7 +27,7 @@ public class ConfessionPageJavaFX extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt = connection.createStatement();
             Statement myStmt2 = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");

@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.sql.*;
@@ -37,7 +36,7 @@ public class Controller8 {
             warningLabel.setText("DO NOT LEAVE TEXTBOX EMPTY");
         } else {
             try {
-                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+                Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
                 Statement myStmt = connection.createStatement();
                 Statement myStmt2 = connection.createStatement();
                 ResultSet myRs = myStmt2.executeQuery("SELECT * FROM admin");

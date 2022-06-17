@@ -10,7 +10,6 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.sql.*;
@@ -39,7 +38,7 @@ public class Controller4 {
 
     public void mainScene(javafx.event.ActionEvent event) throws IOException {
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
             ConfessionPageJavaFX.confessions.clear();
@@ -68,7 +67,7 @@ public class Controller4 {
         ConfessionPageJavaFX.confessionsSearchTemp.clear();
 
         try  {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt = connection.createStatement();
             if(a.equals("Keyword")){
                 choice = "SELECT * FROM approve WHERE confession LIKE '%"+searchText.getText()+"%'";

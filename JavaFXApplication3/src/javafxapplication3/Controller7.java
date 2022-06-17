@@ -49,7 +49,7 @@ public class Controller7 {
             ConfessionPageJavaFX.notApproveTemp.enqueue(a);
             try  {
                 ConfessionPageJavaFX.notApprove.dequeue();
-                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+                Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
                 Statement myStmt = connection.createStatement();
                 Statement myStmt2 = connection.createStatement();
                 Statement myStmt3 = connection.createStatement();
@@ -91,7 +91,7 @@ public class Controller7 {
             messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
 
             try {
-                Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
+                Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
                 Statement myStmt = connection.createStatement();
 
                 myStmt.executeUpdate("DELETE FROM not_approve WHERE confessionID = " + a.getID());
