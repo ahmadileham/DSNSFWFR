@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
 
 public class Controller4 {
 
@@ -60,7 +62,7 @@ public class Controller4 {
     }
 
 
-    public void searchFunction(ActionEvent event) {
+    public void searchFunction(ActionEvent event) throws IOException {
         String a = choicesBox.getValue();
         String choice = "";
         ConfessionPageJavaFX.confessionsSearch.clear();
@@ -77,6 +79,12 @@ public class Controller4 {
                 choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Date & Time")){
                 choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
+            } else if(a.equals("mak ilham")){
+                root = FXMLLoader.load(getClass().getResource("makkaubabi.fxml"));
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
             }
 
             ResultSet myRs = myStmt.executeQuery(choice);

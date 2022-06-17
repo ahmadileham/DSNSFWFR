@@ -24,7 +24,7 @@
          <Button fx:id="adminButton" layoutX="38.0" layoutY="42.0" mnemonicParsing="false" onAction="#adminLoginScene" text="adminion" />
       </children>
    </Pane>
-   <TextArea fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" />
+   <TextArea fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" text="&#10;" />
    <Pane prefHeight="144.0" prefWidth="380.0">
       <children>
          <Button layoutX="487.0" layoutY="37.0" onAction="#onNextButtonClick" text="Next" />
