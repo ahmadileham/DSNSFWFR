@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="javafxapplication3.Controller10">
+   <children>
+      <ImageView fitHeight="370.0" fitWidth="372.0" layoutX="200.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@shafiq.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="84.0" layoutY="97.0" prefHeight="144.0" prefWidth="158.0" text="MAK KAU">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="118.0" text="BABI">
+         <font>
+            <Font size="69.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
