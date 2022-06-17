@@ -45,8 +45,6 @@ public class Controller3 {
                 myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values("+ID+",'"+a.getConfession()+"','"+a.getDate()+"')");
 
 
-                myRs = myStmt3.executeQuery("SELECT * FROM not_approve");
-
 //                while (myRs.next()) {
 //                    ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
 //                }
