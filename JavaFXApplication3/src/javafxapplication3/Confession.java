@@ -61,14 +61,12 @@ public class Confession {
     @Override
     public String toString() {
         if(reply_ID!=0){
-            return "Confession: \n" +
-                "ID: " + ID +
+            return "ID: " + ID +
                 "\nConfession: '" + confession + '\'' +
                 "\nDate: '"+date+'\''+
                 "\nReply ID: " + reply_ID;
         }else{
-            return "Confession: \n" +
-                "ID: " + ID +
+            return "ID: " + ID +
                 "\nConfession: '" + confession + '\'' +
                 "\nDate: '"+date+'\'';
         }
