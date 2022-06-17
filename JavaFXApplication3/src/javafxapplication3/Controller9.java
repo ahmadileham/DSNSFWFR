@@ -66,7 +66,18 @@ public class Controller9 {
 
         Confession a = ConfessionPageJavaFX.confessions.pop();
         deleteThread(a);
-
+        try  {
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
+            Statement myStmt = connection.createStatement();
+            Statement myStmt2 = connection.createStatement();
+            ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
+            ConfessionPageJavaFX.confessions.clear();
+            while (myRs.next()) {
+                ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
+            }
+        } catch (SQLException e) {
+            throw new IllegalStateException("Cannot connect the database!", e);
+        }
         displayArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
 
     }
