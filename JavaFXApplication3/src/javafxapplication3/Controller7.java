@@ -45,10 +45,9 @@ public class Controller7 {
 
 
         if(!ConfessionPageJavaFX.notApprove.isEmpty()){
-            Confession a = ConfessionPageJavaFX.notApprove.peek();
+            Confession a = ConfessionPageJavaFX.notApprove.dequeue();
             ConfessionPageJavaFX.notApproveTemp.enqueue(a);
             try  {
-                ConfessionPageJavaFX.notApprove.dequeue();
                 Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
                 Statement myStmt = connection.createStatement();
                 Statement myStmt2 = connection.createStatement();
