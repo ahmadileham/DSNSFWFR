@@ -24,7 +24,7 @@ public class Controller7 {
             Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt2 = connection.createStatement();
             ResultSet myRs2 = myStmt2.executeQuery("SELECT * FROM not_approve");
-
+            ConfessionPageJavaFX.notApprove.clear();
             while (myRs2.next()) {
                 ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs2.getInt("confessionID"),myRs2.getString("confession"),myRs2.getString("date_post"),myRs2.getInt("reply_ID")));// to fetch data from database
             }

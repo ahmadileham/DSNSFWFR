@@ -46,6 +46,12 @@ public class Queue<E> {
         return list.isEmpty();
     }
 
+    public void clear(){
+        while (!isEmpty()){
+            this.dequeue();
+        }
+    }
+
     @Override
     public String toString() {
         return list.toString();
