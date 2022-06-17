@@ -85,6 +85,7 @@ public class Controller4 {
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
+                return;
             }
 
             ResultSet myRs = myStmt.executeQuery(choice);

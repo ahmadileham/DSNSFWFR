@@ -67,6 +67,7 @@ public class Controller9 {
         Confession a = ConfessionPageJavaFX.confessions.pop();
         deleteThread(a);
 
+        displayArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
 
     }
 // method for batch removal
