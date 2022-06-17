@@ -20,6 +20,17 @@ public class Controller7 {
     private TextArea messageArea;
 
     public void initialize(){
+        try  {
+            Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
+            Statement myStmt2 = connection.createStatement();
+            ResultSet myRs2 = myStmt2.executeQuery("SELECT * FROM not_approve");
+
+            while (myRs2.next()) {
+                ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs2.getInt("confessionID"),myRs2.getString("confession"),myRs2.getString("date_post"),myRs2.getInt("reply_ID")));// to fetch data from database
+            }
+        } catch (SQLException e) {
+            throw new IllegalStateException("Cannot connect the database!", e);
+        }
         if(!ConfessionPageJavaFX.notApprove.isEmpty()) {
             messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
         } else {

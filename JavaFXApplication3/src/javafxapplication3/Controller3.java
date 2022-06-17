@@ -47,9 +47,9 @@ public class Controller3 {
 
                 myRs = myStmt3.executeQuery("SELECT * FROM not_approve");
 
-                while (myRs.next()) {
-                    ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
-                }
+//                while (myRs.next()) {
+//                    ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
+//                }
 
                 myRs.close();
                 myStmt.close();
