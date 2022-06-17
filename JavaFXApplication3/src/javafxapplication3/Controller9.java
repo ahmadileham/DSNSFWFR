@@ -69,7 +69,7 @@ public class Controller9 {
 
 
     }
-
+// method for batch removal
     public void deleteThread(Confession a){
         try  {
             Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/confession_page_dsnsfwfr", "root", "root");
