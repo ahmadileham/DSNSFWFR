@@ -4,33 +4,50 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="370.0" prefWidth="643.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller">
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-   <Pane prefHeight="200.0" prefWidth="200.0">
-      <children>
-      
-         <Label fx:id="welcomeText" layoutX="166.0" layoutY="33.0" text="CONFESSION PAGE" textAlignment="CENTER">
-            <font>
-               <Font name="Roboto Bold" size="32.0" />
-            </font>
-         </Label>
-         <Button fx:id="searchButton" layoutX="520.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchScene" text="searchion" />
-         <Button fx:id="adminButton" layoutX="38.0" layoutY="42.0" mnemonicParsing="false" onAction="#adminLoginScene" text="adminion" />
-      </children>
-   </Pane>
-   <TextArea fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" />
-   <Pane prefHeight="144.0" prefWidth="380.0">
-      <children>
-         <Button layoutX="487.0" layoutY="37.0" onAction="#onNextButtonClick" text="Next" />
-         <Button layoutX="63.0" layoutY="33.0" onAction="#onBackButtonClick" prefHeight="38.0" prefWidth="59.0" text="Back" />
-         <Button fx:id="replyButton" layoutX="182.0" layoutY="33.0" mnemonicParsing="false" onAction="#replyScene" text="Reply" />
-         <Button fx:id="uploadButton" layoutX="292.0" layoutY="33.0" mnemonicParsing="false" onAction="#submitScene" text="Upload confession" />
-      </children>
-   </Pane>
-</VBox>
+<AnchorPane prefHeight="479.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller">
+   <children>
+      <TextArea fx:id="confessionPrint" editable="false" layoutX="31.0" layoutY="68.0" prefHeight="294.0" prefWidth="402.0">
+         <font>
+            <Font name="Roboto Medium" size="12.0" />
+         </font></TextArea>
+      <Label fx:id="welcomeText" layoutX="31.0" layoutY="14.0" prefHeight="52.0" prefWidth="534.0" text="CONFESSION PAGE" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Bold" size="41.0" />
+         </font>
+      </Label>
+      <VBox layoutX="449.0" layoutY="68.0" prefHeight="384.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="uploadButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitScene" text="Upload confession" textAlignment="CENTER" />
+            <Button fx:id="replyButton" mnemonicParsing="false" onAction="#replyScene" text="Reply">
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="searchButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchScene" snapToPixel="false" text="Search">
+               <VBox.margin>
+                  <Insets left="28.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminLoginScene" text="Admin">
+               <VBox.margin>
+                  <Insets left="29.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="38.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="31.0" layoutY="372.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button onAction="#onBackButtonClick" prefHeight="38.0" prefWidth="306.0" text="Back" />
+         </children>
+      </HBox>
+      <Button layoutX="231.0" layoutY="372.0" onAction="#onNextButtonClick" prefHeight="38.0" prefWidth="201.0" text="Next" />
+   </children>
+</AnchorPane>
