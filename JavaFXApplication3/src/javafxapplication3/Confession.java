@@ -60,10 +60,17 @@ public class Confession {
 
     @Override
     public String toString() {
-        return "Confession: \n" +
+        if(reply_ID!=0){
+            return "Confession: \n" +
                 "ID: " + ID +
                 "\nConfession: '" + confession + '\'' +
                 "\nDate: '"+date+'\''+
-                "\n,reply_ID: " + reply_ID;
+                "\nReply ID: " + reply_ID;
+        }else{
+            return "Confession: \n" +
+                "ID: " + ID +
+                "\nConfession: '" + confession + '\'' +
+                "\nDate: '"+date+'\'';
+        }
     }
 }

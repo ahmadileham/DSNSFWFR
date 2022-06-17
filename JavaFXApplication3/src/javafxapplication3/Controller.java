@@ -10,6 +10,7 @@ import javafx.scene.*;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.EmptyStackException;
 /**
  * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
  **/
@@ -41,15 +42,23 @@ public class Controller {
     @FXML
     protected void onNextButtonClick() {
 
-        ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
-        confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        try{
+            ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
+            confessionPrint.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        }catch(EmptyStackException e){
+            confessionPrint.setText("End of posts!");
+        }
     }
 
     @FXML
     protected void onBackButtonClick() {
 
-        confessionPrint.setText(ConfessionPageJavaFX.confessionsTemp.peek().toString());
-        ConfessionPageJavaFX.confessions.push(ConfessionPageJavaFX.confessionsTemp.pop());
+        try{
+            confessionPrint.setText(ConfessionPageJavaFX.confessionsTemp.peek().toString());
+            ConfessionPageJavaFX.confessions.push(ConfessionPageJavaFX.confessionsTemp.pop());
+        }catch(EmptyStackException e){
+            confessionPrint.setText("No post");
+        }
 
     }
 
