@@ -62,13 +62,14 @@ public class Confession {
     public String toString() {
         if(reply_ID!=0){
             return "ID: #UM" + ID +
-                "\nConfession: '" + confession + '\'' +
-                "\nDate: '"+date+'\''+
-                "\nReply ID: #UM" + reply_ID;
+                    "\nReply to #UM" + reply_ID +
+                    "\nDate: '"+date+'\''+
+                    "\nConfession: '" + confession + '\'';
+
         }else{
             return "ID: #UM" + ID +
-                "\nConfession: '" + confession + '\'' +
-                "\nDate: '"+date+'\'';
+                    "\nDate: '"+date+'\''+
+                    "\nConfession: '" + confession + '\'';
         }
     }
 }
