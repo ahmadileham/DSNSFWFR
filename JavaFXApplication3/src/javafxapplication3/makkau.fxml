@@ -5,37 +5,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller">
+<AnchorPane prefHeight="478.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller">
    <children>
-      <VBox alignment="CENTER" prefHeight="370.0" prefWidth="643.0" spacing="20.0">
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-         <Pane prefHeight="200.0" prefWidth="200.0">
-            <children>
-            
-               <Label fx:id="welcomeText" layoutX="166.0" layoutY="33.0" text="CONFESSION PAGE" textAlignment="CENTER">
-                  <font>
-                     <Font name="Roboto Bold" size="32.0" />
-                  </font>
-               </Label>
-               <Button fx:id="searchButton" layoutX="520.0" layoutY="37.0" mnemonicParsing="false" onAction="#searchScene" text="searchion" />
-               <Button fx:id="adminButton" layoutX="38.0" layoutY="42.0" mnemonicParsing="false" onAction="#adminLoginScene" text="adminion" />
-            </children>
-         </Pane>
-         <TextArea id="confessionPrint" fx:id="confessionPrint" editable="false" prefHeight="200.0" prefWidth="200.0" text="&#10;" />
-         <Pane prefHeight="144.0" prefWidth="380.0">
-            <children>
-               <Button layoutX="487.0" layoutY="37.0" onAction="#onNextButtonClick" text="Next" />
-               <Button layoutX="63.0" layoutY="33.0" onAction="#onBackButtonClick" prefHeight="38.0" prefWidth="59.0" text="Back" />
-               <Button fx:id="replyButton" layoutX="182.0" layoutY="33.0" mnemonicParsing="false" onAction="#replyScene" text="Reply" />
-               <Button fx:id="uploadButton" layoutX="292.0" layoutY="33.0" mnemonicParsing="false" onAction="#submitScene" text="Upload confession" />
-            </children>
-         </Pane>
-      </VBox>
+   
+               <Label fx:id="welcomeText" layoutX="14.0" text="CONFESSION PAGE" textAlignment="CENTER">
+         <font>
+            <Font name="Roboto Bold" size="44.0" />
+         </font>
+      </Label>
+      <Button fx:id="searchButton" layoutX="566.0" layoutY="157.0" mnemonicParsing="false" onAction="#searchScene" text="Search" />
+      <Button fx:id="adminButton" layoutX="567.0" layoutY="210.0" mnemonicParsing="false" onAction="#adminLoginScene" text="Admin" />
+      <TextArea id="confessionPrint" fx:id="confessionPrint" editable="false" layoutX="14.0" layoutY="54.0" prefHeight="342.0" prefWidth="486.0" text="&#10;" />
+      <Button fx:id="replyButton" layoutX="567.0" layoutY="105.0" mnemonicParsing="false" onAction="#replyScene" text="Reply" />
+      <Button fx:id="uploadButton" layoutX="532.0" layoutY="54.0" mnemonicParsing="false" onAction="#submitScene" text="Upload confession" />
+      <HBox layoutX="14.0" layoutY="404.0" prefHeight="60.0" prefWidth="486.0">
+         <children>
+            <Button onAction="#onBackButtonClick" prefHeight="60.0" prefWidth="247.0" text="Back">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+            <Button onAction="#onNextButtonClick" prefHeight="60.0" prefWidth="238.0" text="Next">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
