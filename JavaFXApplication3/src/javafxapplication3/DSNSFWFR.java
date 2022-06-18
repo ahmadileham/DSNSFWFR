@@ -5,4 +5,6 @@ public class DSNSFWFR {
     public static String username = "root";
     public static String password = "root";
     // WENOMECHAINDESAMA
+
+    // TAPI SAYANG KEHADIRAN KEKASIH LAMA MU
 }
