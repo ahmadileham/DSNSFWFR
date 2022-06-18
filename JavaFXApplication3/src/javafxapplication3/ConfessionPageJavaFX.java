@@ -12,6 +12,10 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import javafx.scene.image.Image;
 /**
  * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
@@ -24,6 +28,11 @@ public class ConfessionPageJavaFX extends Application {
     public static Stack<Confession> confessionsTemp = new Stack<>();
     public static Queue<Confession> notApprove = new Queue<>(); // these for not approve
     public static Queue<Confession> notApproveTemp = new Queue<>();
+    public static Queue<Confession> pending = new Queue<>();
+    public static Timer time = new Timer(); // Instantiate Timer Object
+    public static CustomTask a = new CustomTask();
+
+
     @Override
     public void start(Stage stage) throws Exception {
         try  {
@@ -38,6 +47,8 @@ public class ConfessionPageJavaFX extends Application {
         } catch (SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
+
+
 //        confessions.push("i have to confess... i am gay");
 //        confessions.push("happy birthday ilham");
 //        confessions.push("help me");
@@ -53,12 +64,22 @@ public class ConfessionPageJavaFX extends Application {
         stage.setTitle("HELLO MAK ILHAM!");
         stage.setScene(scene);
         stage.show();
-        
+
+
+
     }
     // fuck ur mother cibai lancau
     // boo babid aadsdsdadsada
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        time.schedule(a, 0, TimeUnit.SECONDS.toMillis(1));
+
         launch(args);
+
+
+
+
+
     }
-    
+
 }

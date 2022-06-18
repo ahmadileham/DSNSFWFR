@@ -27,37 +27,11 @@ public class Controller3 {
 
     public void uploadConfession(ActionEvent event) throws IOException {
         Confession a = new Confession(confessionTextBox.getText());
-        int ID = 0;
         if(a.getConfession().equals("")){
             //empty.setText("DO NOT LEAVE TEXTBOX EMPTY");
         } else{
-            try  {
-                Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
-                Statement myStmt = connection.createStatement();
-                Statement myStmt2 = connection.createStatement();
-                Statement myStmt3 = connection.createStatement();
-                ResultSet myRs = myStmt2.executeQuery("SELECT * FROM not_approve ORDER BY confessionID DESC LIMIT 1");
 
-                while(myRs.next()) {
-                    ID = myRs.getInt("confessionID") + 1;
-                }
-
-                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values("+ID+",'"+a.getConfession()+"','"+a.getDate()+"')");
-
-
-//                while (myRs.next()) {
-//                    ConfessionPageJavaFX.notApprove.enqueue(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
-//                }
-
-                myRs.close();
-                myStmt.close();
-                myStmt2.close();
-                myStmt3.close();
-
-            } catch (SQLException e) {
-                throw new IllegalStateException("Cannot connect the database!", e);
-            }
-
+            ConfessionPageJavaFX.pending.enqueue(a);
             root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
