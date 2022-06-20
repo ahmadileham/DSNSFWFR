@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller3">
    <children>
-      <TextField fx:id="confessionTextBox" layoutX="111.0" layoutY="89.0" prefHeight="187.0" prefWidth="377.0" promptText="Write your confession..." />
+      <TextField fx:id="confessionTextBox" alignment="TOP_LEFT" layoutX="111.0" layoutY="89.0" prefHeight="187.0" prefWidth="377.0" promptText="Write your confession..." />
       <Button fx:id="backButton" layoutX="97.0" layoutY="320.0" mnemonicParsing="false" onAction="#mainScene" text="Back" />
       <Button fx:id="confessionSubmit" layoutX="445.0" layoutY="320.0" mnemonicParsing="false" onAction="#uploadConfession" text="Submit" />
       <Label fx:id="empty" layoutX="286.0" layoutY="39.0" text="Label" />

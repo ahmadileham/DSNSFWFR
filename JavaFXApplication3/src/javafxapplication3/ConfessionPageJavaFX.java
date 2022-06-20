@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 import java.sql.*;
 import java.util.*;
 import java.util.concurrent.Executors;
@@ -81,5 +82,7 @@ public class ConfessionPageJavaFX extends Application {
 
 
     }
+    
+    
 
 }
