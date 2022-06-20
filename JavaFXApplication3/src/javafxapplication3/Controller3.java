@@ -56,7 +56,7 @@ public class Controller3 {
                 double similarity = StringSimilarity.similarity(oldConfessionContent, newConfessionContent);
                 
                 
-                if(minuteDifference<=3&&similarity>0.5){
+                if(minuteDifference<=3&&similarity>0){
                     Alert spamAlert = new Alert(Alert.AlertType.WARNING);
                     spamAlert.setTitle("SPAM CONTENT ALERT");
                     spamAlert.setContentText("JANGAN SPAM LA BABI");

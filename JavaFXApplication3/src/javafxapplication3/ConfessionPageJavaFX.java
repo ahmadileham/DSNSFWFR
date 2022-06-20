@@ -72,15 +72,8 @@ public class ConfessionPageJavaFX extends Application {
     // fuck ur mother cibai lancau
     // boo babid aadsdsdadsada
     public static void main(String[] args) throws InterruptedException {
-
         time.schedule(a, 0, TimeUnit.SECONDS.toMillis(1));
-
         launch(args);
-
-
-
-
-
     }
     
     
