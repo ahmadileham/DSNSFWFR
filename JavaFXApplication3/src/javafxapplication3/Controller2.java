@@ -88,10 +88,10 @@ public class Controller2 {
                 double similarity = StringSimilarity.similarity(oldConfessionContent, newConfessionContent);
                 
                 
-                if(minuteDifference<=3&&similarity>0.9){
+                if(minuteDifference<=3&&similarity>0.7){
                     Alert spamAlert = new Alert(Alert.AlertType.WARNING);
                     spamAlert.setTitle("SPAM CONTENT ALERT");
-                    spamAlert.setContentText("JANGAN SPAM LA BABI");
+                    spamAlert.setContentText("SPAM CONTENT IS NOT ALLOWED. YOUR SUBMISSION IS BLOCKED");
                     spamAlert.showAndWait();
                     root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();

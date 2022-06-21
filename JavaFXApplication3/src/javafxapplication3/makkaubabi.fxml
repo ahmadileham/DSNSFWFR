@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="javafxapplication3.Controller10">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller10">
    <children>
-      <ImageView fitHeight="370.0" fitWidth="372.0" layoutX="200.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="370.0" fitWidth="372.0" layoutX="129.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@shafiq.png" />
          </image>
       </ImageView>
-      <Label layoutX="84.0" layoutY="97.0" prefHeight="144.0" prefWidth="158.0" text="MAK KAU">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
-      <Label layoutX="395.0" layoutY="118.0" text="BABI">
-         <font>
-            <Font size="69.0" />
-         </font>
-      </Label>
+      <ImageView fitHeight="107.0" fitWidth="131.0" layoutX="18.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@qw.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/capang.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="95.0" fitWidth="113.0" layoutX="309.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@super_monkey_spin.gif" />
+         </image></ImageView>
+      <ImageView fitHeight="93.0" fitWidth="100.0" layoutX="18.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@FPAlyIiWYAAy9Cj.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

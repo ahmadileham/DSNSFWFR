@@ -34,7 +34,7 @@ public class Controller4 {
     @FXML
     private TextArea searchPrint;
 
-    private String[] choices = {"Keyword","Confession ID","Date","Date & Time","mak ilham"};
+    private String[] choices = {"Keyword","Confession ID","Date","Date & Time","?"};
 
     public void initialize(){
         choicesBox.getItems().addAll(choices);
@@ -81,7 +81,7 @@ public class Controller4 {
                 choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("Date & Time")){
                 choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
-            } else if(a.equals("mak ilham")){
+            } else if(a.equals("?")){
                 root = FXMLLoader.load(getClass().getResource("makkaubabi.fxml"));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
