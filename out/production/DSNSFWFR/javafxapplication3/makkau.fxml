@@ -34,5 +34,7 @@
             </Button>
          </children>
       </HBox>
+      <Button fx:id="replyScene" layoutX="567.0" layoutY="260.0" mnemonicParsing="false" onAction="#readScene" text="Read" />
+      <Button fx:id="viewRepliesButton" layoutX="549.0" layoutY="306.0" mnemonicParsing="false" onAction="#viewRepliesScene" text="View Replies" />
    </children>
 </AnchorPane>

@@ -36,6 +36,8 @@ public class Controller2 {
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
 
+            ConfessionPageJavaFX.confessions.clear();
+
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
             }
@@ -56,6 +58,7 @@ public class Controller2 {
     public void uploadConfession(ActionEvent event) throws IOException {
         int b = ConfessionPageJavaFX.confessions.peek().getID();
         Confession a = new Confession(messageReply.getText());
+        a.setReply_ID(b);
         int ID = 0;
         if (a.getConfession().equals("")) {
 //            empty.setText("DO NOT LEAVE TEXTBOX EMPTY");

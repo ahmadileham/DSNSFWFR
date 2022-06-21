@@ -35,7 +35,7 @@ public class CustomTask extends TimerTask {
                     ID = myRs.getInt("confessionID") + 1;
                 }
 
-                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "')");
+                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post, reply_ID) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "',"+a.getReply_ID()+")");
 
                 myRs.close();
                 myStmt.close();
@@ -69,7 +69,7 @@ public class CustomTask extends TimerTask {
                     ID = myRs.getInt("confessionID") + 1;
                 }
 
-                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "')");
+                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post, reply_ID) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "',"+a.getReply_ID()+")");
 
                 myRs.close();
                 myStmt.close();
@@ -103,7 +103,7 @@ public class CustomTask extends TimerTask {
                     ID = myRs.getInt("confessionID") + 1;
                 }
 
-                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "')");
+                myStmt.executeUpdate("insert into not_approve(confessionID, confession, date_post, reply_ID) values(" + ID + ",'" + a.getConfession() + "','" + a.getDate() + "',"+a.getReply_ID()+")");
 
                 myRs.close();
                 myStmt.close();

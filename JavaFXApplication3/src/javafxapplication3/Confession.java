@@ -19,6 +19,14 @@ public class Confession {
         date = simpleDateFormat.format(new Date());
     }
 
+    public Confession(String confession,int reply_ID) {
+        this.confession = confession;
+        String pattern = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        date = simpleDateFormat.format(new Date());
+        this.reply_ID = reply_ID;
+    }
+
     public Confession(int ID,String confession, String date,int reply_ID) {
         this.ID = ID;
         this.confession = confession;

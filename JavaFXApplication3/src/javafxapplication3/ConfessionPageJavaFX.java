@@ -27,6 +27,8 @@ public class ConfessionPageJavaFX extends Application {
     public static Stack<Confession> confessionsSearchTemp = new Stack<>();
     public static Stack<Confession> confessions = new Stack<>();
     public static Stack<Confession> confessionsTemp = new Stack<>();
+    public static Stack<Confession> viewReplies = new Stack<>();
+    public static Stack<Confession> viewRepliesTemp = new Stack<>();
     public static Queue<Confession> notApprove = new Queue<>(); // these for not approve
     public static Queue<Confession> notApproveTemp = new Queue<>();
     public static Queue<Confession> pending = new Queue<>();
