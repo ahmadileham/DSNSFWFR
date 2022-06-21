@@ -32,7 +32,7 @@ public class Controller6 {
     }
 
     public void approveNLPScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkauNLP.fxml"));
+        root = FXMLLoader.load(getClass().getResource("vacationmodePage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
