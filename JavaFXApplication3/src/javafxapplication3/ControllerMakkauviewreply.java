@@ -91,7 +91,7 @@ public class ControllerMakkauviewreply {
             Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM not_approve");
-            ConfessionPageJavaFX.confessions.clear();
+            //ConfessionPageJavaFX.confessions.clear();
 
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
