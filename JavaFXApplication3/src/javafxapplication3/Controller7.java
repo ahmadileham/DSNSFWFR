@@ -34,7 +34,7 @@ public class Controller7 {
         if(!ConfessionPageJavaFX.notApprove.isEmpty()) {
             messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
         } else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts..");
         }
     }
 
@@ -78,14 +78,14 @@ public class Controller7 {
                 if (!ConfessionPageJavaFX.notApprove.isEmpty()){
                     messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
                 }else {
-                    messageArea.setText("No new posts.. mak kau liham");
+                    messageArea.setText("No new posts..");
                 }
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
             }
         }else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts..");
             return;
         }
     }
@@ -106,14 +106,14 @@ public class Controller7 {
                 if (!ConfessionPageJavaFX.notApprove.isEmpty()){
                     messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
                 }else {
-                    messageArea.setText("No new posts.. mak kau liham");
+                    messageArea.setText("No new posts..");
                 }
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
             }
         }else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts..");
             return;
         }
     }

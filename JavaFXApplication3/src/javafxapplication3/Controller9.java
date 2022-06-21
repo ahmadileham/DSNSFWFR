@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.EmptyStackException;
 
 public class Controller9 {
 
@@ -29,6 +30,8 @@ public class Controller9 {
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
 
             ConfessionPageJavaFX.confessions.clear();
+            ConfessionPageJavaFX.confessionsTemp.clear();
+
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"),myRs.getInt("reply_ID")));// to fetch data from database
             }
@@ -40,15 +43,23 @@ public class Controller9 {
     @FXML
 
     protected void onNextButtonClick() {
-        ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
-        displayArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        try{
+            ConfessionPageJavaFX.confessionsTemp.push(ConfessionPageJavaFX.confessions.pop());
+            displayArea.setText(ConfessionPageJavaFX.confessions.peek().toString());
+        }catch(EmptyStackException e){
+            displayArea.setText("No posts...");
+        }
     }
 
     @FXML
     protected void onBackButtonClick() {
 
-        displayArea.setText(ConfessionPageJavaFX.confessionsTemp.peek().toString());
-        ConfessionPageJavaFX.confessions.push(ConfessionPageJavaFX.confessionsTemp.pop());
+        try{
+            displayArea.setText(ConfessionPageJavaFX.confessionsTemp.peek().toString());
+            ConfessionPageJavaFX.confessions.push(ConfessionPageJavaFX.confessionsTemp.pop());
+        }catch(EmptyStackException e){
+            displayArea.setText("No posts....");
+        }
 
     }
 

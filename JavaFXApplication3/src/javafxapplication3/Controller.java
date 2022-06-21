@@ -155,5 +155,13 @@ public class Controller {
         stage.show();
     }
 
+    public void originalPostScene(javafx.event.ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("makkauoriginal.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

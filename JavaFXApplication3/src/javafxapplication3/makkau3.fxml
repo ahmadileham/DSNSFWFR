@@ -4,12 +4,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller3">
    <children>
-      <TextField fx:id="confessionTextBox" alignment="TOP_LEFT" layoutX="111.0" layoutY="89.0" prefHeight="187.0" prefWidth="377.0" promptText="Write your confession..." />
-      <Button fx:id="backButton" layoutX="97.0" layoutY="320.0" mnemonicParsing="false" onAction="#mainScene" text="Back" />
-      <Button fx:id="confessionSubmit" layoutX="445.0" layoutY="320.0" mnemonicParsing="false" onAction="#uploadConfession" text="Submit" />
-      <Label fx:id="empty" layoutX="286.0" layoutY="39.0" text="Label" />
+      <TextField fx:id="confessionTextBox" alignment="TOP_LEFT" layoutX="107.0" layoutY="79.0" prefHeight="187.0" prefWidth="382.0" promptText="Write your confession..." AnchorPane.bottomAnchor="133.8" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="110.60000000000002" AnchorPane.topAnchor="79.0" />
+      <Button fx:id="backButton" layoutX="107.0" layoutY="292.0" mnemonicParsing="false" onAction="#mainScene" text="Back" AnchorPane.bottomAnchor="82.39999999999998" AnchorPane.leftAnchor="107.0" />
+      <Button fx:id="confessionSubmit" layoutX="435.0" layoutY="292.0" mnemonicParsing="false" onAction="#uploadConfession" text="Submit" AnchorPane.bottomAnchor="82.39999999999998" AnchorPane.rightAnchor="111.39999999999998" />
+      <Label fx:id="empty" alignment="CENTER" contentDisplay="CENTER" layoutX="170.0" layoutY="287.0" prefHeight="18.0" prefWidth="256.0" textAlignment="CENTER" textFill="RED" AnchorPane.bottomAnchor="94.6" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="174.0" />
+      <Label fx:id="empty1" layoutX="14.0" layoutY="14.0" text="UPLOAD CONFESSION" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="38.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

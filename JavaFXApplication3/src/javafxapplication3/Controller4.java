@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.EmptyStackException;
+
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 
@@ -95,7 +97,11 @@ public class Controller4 {
                 ConfessionPageJavaFX.confessionsSearch.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }
 
-            searchPrint.setText(ConfessionPageJavaFX.confessionsSearch.peek().toString());
+            try{
+                searchPrint.setText(ConfessionPageJavaFX.confessionsSearch.peek().toString());
+            }catch(EmptyStackException e){
+                searchPrint.setText("There's nothing here...");
+            }
 
         } catch (
                 SQLException e) {
@@ -106,15 +112,23 @@ public class Controller4 {
     @FXML
     protected void onNextButtonClick() {
 
-        ConfessionPageJavaFX.confessionsSearchTemp.push(ConfessionPageJavaFX.confessionsSearch.pop());
-        searchPrint.setText(ConfessionPageJavaFX.confessionsSearch.peek().toString());
+        try{
+            ConfessionPageJavaFX.confessionsSearchTemp.push(ConfessionPageJavaFX.confessionsSearch.pop());
+            searchPrint.setText(ConfessionPageJavaFX.confessionsSearch.peek().toString());
+        }catch(EmptyStackException e){
+            searchPrint.setText("There's nothing here...");
+        }
     }
 
     @FXML
     protected void onBackButtonClick() {
 
-        searchPrint.setText(ConfessionPageJavaFX.confessionsSearchTemp.peek().toString());
-        ConfessionPageJavaFX.confessionsSearch.push(ConfessionPageJavaFX.confessionsSearchTemp.pop());
+        try{
+            searchPrint.setText(ConfessionPageJavaFX.confessionsSearchTemp.peek().toString());
+            ConfessionPageJavaFX.confessionsSearch.push(ConfessionPageJavaFX.confessionsSearchTemp.pop());
+        }catch(EmptyStackException e){
+            searchPrint.setText("There's nothing here...");
+        }
 
     }
 }

@@ -29,7 +29,7 @@ public class Controller3 {
     public void uploadConfession(ActionEvent event) throws IOException {
         Confession a = new Confession(confessionTextBox.getText());
         if(a.getConfession().equals("")){
-            //empty.setText("DO NOT LEAVE TEXTBOX EMPTY");
+            empty.setText("DO NOT LEAVE TEXTBOX EMPTY");
         } else{
             String newConfessionDate = a.getDate();
             String newConfessionContent = a.getConfession();
@@ -56,7 +56,7 @@ public class Controller3 {
                 double similarity = StringSimilarity.similarity(oldConfessionContent, newConfessionContent);
                 
                 
-                if(minuteDifference<=3&&similarity>0){
+                if(minuteDifference<=3&&similarity>0.9){
                     Alert spamAlert = new Alert(Alert.AlertType.WARNING);
                     spamAlert.setTitle("SPAM CONTENT ALERT");
                     spamAlert.setContentText("JANGAN SPAM LA BABI");
@@ -85,6 +85,7 @@ public class Controller3 {
             Statement myStmt = connection.createStatement();
             ResultSet myRs = myStmt.executeQuery("SELECT * FROM approve");
             ConfessionPageJavaFX.confessions.clear();
+            ConfessionPageJavaFX.confessionsTemp.clear();
             while (myRs.next()) {
                 ConfessionPageJavaFX.confessions.push(new Confession(myRs.getInt("confessionID"),myRs.getString("confession"),myRs.getString("date_post"), myRs.getInt("reply_ID")));// to fetch data from database
             }

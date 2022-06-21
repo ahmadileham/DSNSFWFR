@@ -5,13 +5,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.ControllerNLP">
    <children>
       <DialogPane />
-      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#adminLoginScene" text="Back" />
-      <TextArea fx:id="messageArea" editable="false" layoutX="87.0" layoutY="66.0" prefHeight="200.0" prefWidth="443.0" />
-      <Button layoutX="269.0" layoutY="310.0" mnemonicParsing="false" onAction="#startNLP" text="Start" />
-      <Label fx:id="nlpLabel" layoutX="194.0" layoutY="30.0" prefHeight="18.0" prefWidth="190.0" />
+      <Button layoutX="27.0" layoutY="27.0" mnemonicParsing="false" onAction="#adminLoginScene" text="Back" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="27.0" />
+      <TextArea fx:id="messageArea" editable="false" layoutX="78.0" layoutY="66.0" prefHeight="232.0" prefWidth="443.0" wrapText="true" AnchorPane.bottomAnchor="102.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="78.80000000000001" AnchorPane.topAnchor="66.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="341.0" mnemonicParsing="false" onAction="#startNLP" text="Start" textAlignment="CENTER" AnchorPane.bottomAnchor="33.4" />
+      <Label fx:id="nlpLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="308.0" prefHeight="18.0" prefWidth="190.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="73.6" AnchorPane.leftAnchor="204.99999999999997" AnchorPane.rightAnchor="204.6" />
+      <Label fx:id="nlpLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="30.0" prefHeight="18.0" prefWidth="190.0" text="VACATION MODE" textAlignment="CENTER" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="204.6" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

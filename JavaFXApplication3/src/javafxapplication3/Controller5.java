@@ -34,7 +34,7 @@ public class Controller5 {
 
         int ID = 0;
         if (a.equals("") || b.equals("")) {
-            warningLabel.setText("mak ilam");
+            warningLabel.setText("Don't leave textboxes empty!");
         } else {
             try {
                 Connection connection = DriverManager.getConnection(DSNSFWFR.url, DSNSFWFR.username, DSNSFWFR.password);

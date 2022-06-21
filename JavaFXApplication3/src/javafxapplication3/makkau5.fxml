@@ -9,28 +9,28 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller5">
    <children>
-      <Label layoutX="231.0" layoutY="47.0" text="LOGIN">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="49.0" text="LOGIN" textAlignment="CENTER" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="229.2">
          <font>
-            <Font name="ROGFonts-Regular" size="37.0" />
+            <Font name="ROGFonts-Regular" size="38.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameField" layoutX="225.0" layoutY="139.0" />
-      <PasswordField fx:id="passField" layoutX="226.0" layoutY="200.0" />
-      <Label layoutX="272.0" layoutY="115.0" text="Username">
+      <TextField fx:id="usernameField" layoutX="225.0" layoutY="139.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.4" />
+      <PasswordField fx:id="passField" layoutX="226.0" layoutY="200.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="224.4" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="103.0" prefHeight="26.0" prefWidth="94.0" text="Username" textAlignment="CENTER" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="256.0">
          <font>
-            <Font name="Stencil" size="12.0" />
+            <Font name="Calibri Light" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="274.0" layoutY="174.0" text="Password">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="273.0" layoutY="173.0" prefHeight="14.0" prefWidth="49.0" text="Password" textAlignment="CENTER" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="278.0">
          <font>
-            <Font name="Vivaldi Italic" size="12.0" />
+            <Font name="Calibri Light" size="12.0" />
          </font>
       </Label>
-      <Button fx:id="loginButton" layoutX="376.0" layoutY="289.0" mnemonicParsing="false" onAction="#adminScene" text="Login" />
-      <Button fx:id="homeButton" layoutX="174.0" layoutY="289.0" mnemonicParsing="false" onAction="#mainScene" text="Home" />
+      <Button fx:id="loginButton" layoutX="376.0" layoutY="289.0" mnemonicParsing="false" onAction="#adminScene" text="Login" AnchorPane.bottomAnchor="85.4" AnchorPane.rightAnchor="178.4" />
+      <Button fx:id="homeButton" layoutX="181.0" layoutY="289.0" mnemonicParsing="false" onAction="#mainScene" prefHeight="26.0" prefWidth="49.0" text="Home" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="181.0" />
       <Label fx:id="warningLabel" alignment="CENTER" layoutX="195.0" layoutY="250.0" prefHeight="18.0" prefWidth="207.0" textAlignment="CENTER" textFill="RED">
          <font>
-            <Font name="Showcard Gothic" size="12.0" />
+            <Font name="Calibri Bold" size="12.0" />
          </font>
       </Label>
    </children>
