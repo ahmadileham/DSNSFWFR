@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.*;
 
 public class Controller6 {
 
@@ -17,7 +16,7 @@ public class Controller6 {
 
 
     public void loginScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau5.fxml"));
+        root = FXMLLoader.load(getClass().getResource("loginAdmin.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -25,7 +24,7 @@ public class Controller6 {
     }
 
     public void approveScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau7.fxml"));
+        root = FXMLLoader.load(getClass().getResource("approvePage.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -41,7 +40,7 @@ public class Controller6 {
     }
 
     public void registerAdminScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau8.fxml"));
+        root = FXMLLoader.load(getClass().getResource("registerAdminPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -49,7 +48,7 @@ public class Controller6 {
     }
 
     public void deleteScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau9.fxml"));
+        root = FXMLLoader.load(getClass().getResource("deletePage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

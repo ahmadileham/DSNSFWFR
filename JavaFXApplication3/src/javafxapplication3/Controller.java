@@ -1,5 +1,4 @@
 package javafxapplication3;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -12,7 +11,6 @@ import javax.speech.Central;
 import javax.speech.synthesis.Synthesizer;
 import javax.speech.synthesis.SynthesizerModeDesc;
 import java.io.IOException;
-import java.sql.*;
 import java.util.EmptyStackException;
 /**
  * @author DSNSFWFR ( ILHAM , BO , CAPANG , SHAFIQ)
@@ -108,7 +106,7 @@ public class Controller {
     public void replyScene(javafx.event.ActionEvent event) throws IOException {
 
 
-        root = FXMLLoader.load(getClass().getResource("makkau2.fxml"));
+        root = FXMLLoader.load(getClass().getResource("replyPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -121,7 +119,7 @@ public class Controller {
     public void adminLoginScene(javafx.event.ActionEvent event) throws IOException {
 
 
-        root = FXMLLoader.load(getClass().getResource("makkau5.fxml"));
+        root = FXMLLoader.load(getClass().getResource("loginAdmin.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -132,7 +130,7 @@ public class Controller {
     }
 
     public void submitScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau3.fxml"));
+        root = FXMLLoader.load(getClass().getResource("uploadPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -140,7 +138,7 @@ public class Controller {
     }
 
     public void searchScene(javafx.event.ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("makkau4.fxml"));
+        root = FXMLLoader.load(getClass().getResource("searchPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -148,7 +146,7 @@ public class Controller {
     }
 
     public void viewRepliesScene(javafx.event.ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("makkauviewreply.fxml"));
+        root = FXMLLoader.load(getClass().getResource("viewReplyPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -156,7 +154,7 @@ public class Controller {
     }
 
     public void originalPostScene(javafx.event.ActionEvent event) throws IOException{
-        root = FXMLLoader.load(getClass().getResource("makkauoriginal.fxml"));
+        root = FXMLLoader.load(getClass().getResource("viewOriginalPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

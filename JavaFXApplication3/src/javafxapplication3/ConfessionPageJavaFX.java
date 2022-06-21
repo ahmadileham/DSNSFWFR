@@ -13,8 +13,6 @@ import javafx.stage.Stage;
 
 import java.sql.*;
 import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import javafx.scene.image.Image;
@@ -60,7 +58,7 @@ public class ConfessionPageJavaFX extends Application {
 //        confessions.push("i hate chinese people");
 //        confessions.push("i hate ilham people");
 //        confessions.push("i hate BO people");
-        FXMLLoader fxmlLoader = new FXMLLoader(ConfessionPageJavaFX.class.getResource("makkau.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ConfessionPageJavaFX.class.getResource("mainPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Image icon = new Image("javafxapplication3\\shafiq.png");
         stage.getIcons().add(icon);

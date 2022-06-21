@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.EmptyStackException;
 
-public class ControllerMakkauviewreply {
+public class ControllerViewReply {
 
     private Stage stage;
     private Scene scene;
@@ -104,7 +104,7 @@ public class ControllerMakkauviewreply {
                 SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
-        root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

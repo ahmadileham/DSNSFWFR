@@ -41,7 +41,7 @@ public class Controller7 {
     public void adminLoginScene(javafx.event.ActionEvent event) throws IOException {
 
 
-        root = FXMLLoader.load(getClass().getResource("makkau6.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainAdminPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

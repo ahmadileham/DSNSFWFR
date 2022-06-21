@@ -10,7 +10,7 @@ import javafx.scene.*;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.EmptyStackException;
+
 import javafx.scene.control.Alert;
 
 
@@ -48,7 +48,7 @@ public class Controller2 {
                 SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
-        root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -93,7 +93,7 @@ public class Controller2 {
                     spamAlert.setTitle("SPAM CONTENT ALERT");
                     spamAlert.setContentText("SPAM CONTENT IS NOT ALLOWED. YOUR SUBMISSION IS BLOCKED");
                     spamAlert.showAndWait();
-                    root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
                     stage.setScene(scene);
@@ -103,7 +103,7 @@ public class Controller2 {
             }
             
                     ConfessionPageJavaFX.pending.enqueue(a);
-                    root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                     scene = new Scene(root);
                     stage.setScene(scene);

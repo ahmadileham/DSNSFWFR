@@ -15,9 +15,6 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.EmptyStackException;
 
-import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-
 public class Controller4 {
 
     private Stage stage;
@@ -56,7 +53,7 @@ public class Controller4 {
                 SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
-        root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -82,7 +79,7 @@ public class Controller4 {
             } else if(a.equals("Date & Time")){
                 choice = "SELECT * FROM approve WHERE date_post LIKE '%"+searchText.getText()+"%'";
             } else if(a.equals("?")){
-                root = FXMLLoader.load(getClass().getResource("makkaubabi.fxml"));
+                root = FXMLLoader.load(getClass().getResource("secretPage.fxml"));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);

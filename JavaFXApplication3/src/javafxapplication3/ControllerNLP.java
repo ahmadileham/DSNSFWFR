@@ -39,14 +39,14 @@ public class ControllerNLP {
         if(!ConfessionPageJavaFX.notApprove.isEmpty()) {
             messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
         } else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts.");
         }
     }
 
     public void adminLoginScene(javafx.event.ActionEvent event) throws IOException {
 
 
-        root = FXMLLoader.load(getClass().getResource("makkau6.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainAdminPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -57,62 +57,63 @@ public class ControllerNLP {
     }
     @FXML
     protected void startNLP() {
+        nlpLabel.setText("Machine is calculating the sentiment of the confession...");
+//        try{
+//            Thread.sleep(3000);
+//        }catch(InterruptedException ex){
+//            //do stuff
+//        }
         nlpPipeline.init();
         while(!ConfessionPageJavaFX.notApprove.isEmpty()){
             Confession a = ConfessionPageJavaFX.notApprove.peek();
             float score = nlpPipeline.getReviewSentiment(a.getConfession(),0.4f);
             System.out.println(score);
-            try{
-                nlpLabel.setText("Machine is calculating the sentiment of the confession...");
-                Thread.sleep(5000);
-            }catch(InterruptedException ex){
-                //do stuff
-            }
+
             if(score == 0.0){
-                nlpLabel.setText("REJECTED because overall sentiment of the confession is very negative");
+                nlpLabel.setText("Sentiment Analysis completed *robot sounds*");
                 rejectMessage();
-                try{
-
-                    Thread.sleep(2000);
-                }catch(InterruptedException ex){
-                    //do stuff
-                }
+//                try{
+//
+//                    Thread.sleep(2000);
+//                }catch(InterruptedException ex){
+//                    //do stuff
+//                }
             } else if (score == 1.0){
-                nlpLabel.setText("REJECTED because overall sentiment of the confession is negative");
+                nlpLabel.setText("Sentiment Analysis completed *robot sounds*");
                 rejectMessage();
-                try{
-
-                    Thread.sleep(2000);
-                }catch(InterruptedException ex){
-                    //do stuff
-                }
+//                try{
+//
+//                    Thread.sleep(2000);
+//                }catch(InterruptedException ex){
+//                    //do stuff
+//                }
             } else if (score == 2.0){
-                nlpLabel.setText("APPROVED because overall sentiment of the confession is neutral");
+                nlpLabel.setText("Sentiment Analysis completed *robot sounds*");
                 approveMessage();
-                try{
-
-                    Thread.sleep(2000);
-                }catch(InterruptedException ex){
-                    //do stuff
-                }
+//                try{
+//
+//                    Thread.sleep(2000);
+//                }catch(InterruptedException ex){
+//                    //do stuff
+//                }
             } else if( score == 3.0){
-                nlpLabel.setText("APPROVED because overall sentiment of the confession is positive");
+                nlpLabel.setText("Sentiment Analysis completed *robot sounds*");
                 approveMessage();
-                try{
-
-                    Thread.sleep(2000);
-                }catch(InterruptedException ex){
-                    //do stuff
-                }
+//                try{
+//
+//                    Thread.sleep(2000);
+//                }catch(InterruptedException ex){
+//                    //do stuff
+//                }
             } else if(score == 4.0){
-                nlpLabel.setText("APPROVED because overall sentiment of the confession is very positive");
+                nlpLabel.setText("Sentiment Analysis completed *robot sounds*");
                 approveMessage();
-                try{
-
-                    Thread.sleep(2000);
-                }catch(InterruptedException ex){
-                    //do stuff
-                }
+//                try{
+//
+//                    Thread.sleep(2000);
+//                }catch(InterruptedException ex){
+//                    //do stuff
+//                }
             }
         }
 
@@ -145,14 +146,14 @@ public class ControllerNLP {
                 if (!ConfessionPageJavaFX.notApprove.isEmpty()){
                     messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
                 }else {
-                    messageArea.setText("No new posts.. mak kau liham");
+                    messageArea.setText("No new posts..");
                 }
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
             }
         }else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts..");
             return;
         }
     }
@@ -173,14 +174,14 @@ public class ControllerNLP {
                 if (!ConfessionPageJavaFX.notApprove.isEmpty()){
                     messageArea.setText(ConfessionPageJavaFX.notApprove.peek().toString());
                 }else {
-                    messageArea.setText("No new posts.. mak kau liham");
+                    messageArea.setText("No new posts..");
                 }
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
             }
         }else {
-            messageArea.setText("No new posts.. mak kau liham");
+            messageArea.setText("No new posts..");
             return;
         }
     }

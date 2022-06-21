@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
-public class makkauoriginalController {
+public class ControllerOriginalPost {
 
     private Stage stage;
     private Scene scene;
@@ -68,7 +68,7 @@ public class makkauoriginalController {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
 
-        root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -47,7 +47,7 @@ public class Controller5 {
                 while (myRs.next()) {
                     if(myRs.getString("username").equals(a)){
                         if(myRs.getString("password").equals(b)){
-                            root = FXMLLoader.load(getClass().getResource("makkau6.fxml"));
+                            root = FXMLLoader.load(getClass().getResource("mainAdminPage.fxml"));
                             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             scene = new Scene(root);
                             stage.setScene(scene);
@@ -89,7 +89,7 @@ public class Controller5 {
                 SQLException e) {
             throw new IllegalStateException("Cannot connect the database!", e);
         }
-        root = FXMLLoader.load(getClass().getResource("makkau.fxml"));
+        root = FXMLLoader.load(getClass().getResource("mainPage.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
