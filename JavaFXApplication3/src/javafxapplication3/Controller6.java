@@ -32,6 +32,14 @@ public class Controller6 {
         stage.show();
     }
 
+    public void approveNLPScene(javafx.event.ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("makkauNLP.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void registerAdminScene(javafx.event.ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("makkau8.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

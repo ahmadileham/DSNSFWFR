@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.Controller6">
    <children>
       <Label layoutX="272.0" layoutY="70.0" text="ADMIN MAIN PAGE">
@@ -16,13 +15,14 @@
          </font>
       </Label>
       <Button layoutX="101.0" layoutY="336.0" mnemonicParsing="false" onAction="#approveScene" text="Approve New Confessions" />
-      <Button layoutX="56.0" layoutY="75.0" mnemonicParsing="false" text="Delete Existing Confessions" onAction="#deleteScene" />
+      <Button layoutX="56.0" layoutY="75.0" mnemonicParsing="false" onAction="#deleteScene" text="Delete Existing Confessions" />
       <Button layoutX="217.0" layoutY="195.0" mnemonicParsing="false" onAction="#loginScene" prefHeight="36.0" prefWidth="110.0" text="Log Out" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="195.0" />
-      <Button layoutX="416.0" layoutY="187.0" mnemonicParsing="false" text="Register new admin" onAction="#registerAdminScene"/>
+      <Button layoutX="416.0" layoutY="187.0" mnemonicParsing="false" onAction="#registerAdminScene" text="Register new admin" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@qw.jpg" />
          </image>
       </ImageView>
+      <Button layoutX="416.0" layoutY="310.0" mnemonicParsing="false" onAction="#approveNLPScene" text="Vacation Mode" />
    </children>
 </AnchorPane>

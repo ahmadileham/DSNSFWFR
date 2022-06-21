@@ -7,7 +7,23 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-8.0.29" level="project" />
+    <orderEntry type="library" exported="" name="lib" level="project" />
+    <orderEntry type="library" exported="" name="mysql-connector-java-8.0.29" level="project" />
+    <orderEntry type="library" exported="" name="stanford-corenlp-4.4.0" level="application" />
+    <orderEntry type="library" exported="" name="stanford-corenlp-4.4.0-models" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/stanford-corenlp-4.4.0" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/stanford-corenlp-4.4.0" />
+          <root url="file://$USER_HOME$/Downloads/stanford-corenlp-4.4.0" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/stanford-corenlp-4.4.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/stanford-corenlp-4.4.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
