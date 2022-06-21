@@ -50,27 +50,18 @@ public class ConfessionPageJavaFX extends Application {
         }
 
 
-//        confessions.push("i have to confess... i am gay");
-//        confessions.push("happy birthday ilham");
-//        confessions.push("help me");
-//        confessions.push("i love capang");
-//        confessions.push("i hate black people");
-//        confessions.push("i hate chinese people");
-//        confessions.push("i hate ilham people");
-//        confessions.push("i hate BO people");
         FXMLLoader fxmlLoader = new FXMLLoader(ConfessionPageJavaFX.class.getResource("mainPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Image icon = new Image("javafxapplication3\\shafiq.png");
         stage.getIcons().add(icon);
-        stage.setTitle("HELLO MAK ILHAM!");
+        stage.setTitle("DSNSFWFR CONFESSION PAGE");
         stage.setScene(scene);
         stage.show();
 
 
 
     }
-    // fuck ur mother cibai lancau
-    // boo babid aadsdsdadsada
+
     public static void main(String[] args) throws InterruptedException {
         time.schedule(a, 0, TimeUnit.SECONDS.toMillis(1));
         launch(args);
