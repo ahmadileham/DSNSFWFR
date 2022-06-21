@@ -27,6 +27,7 @@
                <HBox.margin>
                   <Insets />
                </HBox.margin></Button>
+            <Button fx:id="viewRepliesButton" mnemonicParsing="false" onAction="#viewRepliesScene" prefHeight="60.0" prefWidth="204.0" text="View Replies" />
             <Button onAction="#onNextButtonClick" prefHeight="60.0" prefWidth="238.0" text="Next">
                <HBox.margin>
                   <Insets />
@@ -35,6 +36,5 @@
          </children>
       </HBox>
       <Button fx:id="replyScene" layoutX="567.0" layoutY="260.0" mnemonicParsing="false" onAction="#readScene" text="Read" />
-      <Button fx:id="viewRepliesButton" layoutX="549.0" layoutY="306.0" mnemonicParsing="false" onAction="#viewRepliesScene" text="View Replies" />
    </children>
 </AnchorPane>
