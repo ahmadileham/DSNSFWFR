@@ -17,10 +17,10 @@ public class CustomTask extends TimerTask {
 
     public void run() {
         if (ConfessionPageJavaFX.pending.isEmpty()) {
-            System.out.println("test");
+            System.out.println("Pending queue is empty.");
         } else if (ConfessionPageJavaFX.pending.getSize() <= 5) {
             Confession a = ConfessionPageJavaFX.pending.peek();
-            System.out.println("5 seconds");
+            System.out.println("Enqueue \"" + a.getConfession() + "\" in 15 minutes..");
 
             int ID = 0;
             try {
@@ -41,20 +41,22 @@ public class CustomTask extends TimerTask {
                 myStmt.close();
                 myStmt2.close();
                 myStmt3.close();
+                try {
+                    TimeUnit.MINUTES.sleep(15);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 ConfessionPageJavaFX.notApprove.enqueue(ConfessionPageJavaFX.pending.dequeue());
+                System.out.println("\"" + a.getConfession() + "\"" + "has been added into the queue...");
 
             } catch (Exception ex) {
                 System.out.println("error running thread " + ex.getMessage());
             }
 
-            try {
-                TimeUnit.SECONDS.sleep(30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
         } else if (ConfessionPageJavaFX.pending.getSize() <= 10 ) {
             Confession a = ConfessionPageJavaFX.pending.peek();
-            System.out.println("5 seconds");
+            System.out.println("Enqueue \"" + a.getConfession() + "\"in 10 minutes...");
 
             int ID = 0;
             try {
@@ -75,20 +77,21 @@ public class CustomTask extends TimerTask {
                 myStmt.close();
                 myStmt2.close();
                 myStmt3.close();
+                try {
+                    TimeUnit.MINUTES.sleep(10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 ConfessionPageJavaFX.notApprove.enqueue(ConfessionPageJavaFX.pending.dequeue());
 
             } catch (Exception ex) {
                 System.out.println("error running thread " + ex.getMessage());
             }
 
-            try {
-                TimeUnit.SECONDS.sleep(30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
         } else if (ConfessionPageJavaFX.pending.getSize() > 10) {
             Confession a = ConfessionPageJavaFX.pending.peek();
-            System.out.println("5 seconds");
+            System.out.println("Enqueue \"" + a.getConfession() + "\"in 5 minutes...");
 
             int ID = 0;
             try {
@@ -109,17 +112,18 @@ public class CustomTask extends TimerTask {
                 myStmt.close();
                 myStmt2.close();
                 myStmt3.close();
+                try {
+                    TimeUnit.MINUTES.sleep(5);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 ConfessionPageJavaFX.notApprove.enqueue(ConfessionPageJavaFX.pending.dequeue());
 
             } catch (Exception ex) {
                 System.out.println("error running thread " + ex.getMessage());
             }
 
-            try {
-                TimeUnit.SECONDS.sleep(30);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
         }
     }
 }

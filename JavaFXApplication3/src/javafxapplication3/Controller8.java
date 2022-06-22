@@ -58,11 +58,7 @@ public class Controller8 {
                 myStmt.close();
                 myStmt2.close();
 
-                root = FXMLLoader.load(getClass().getResource("mainAdminPage.fxml"));
-                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+
 
             } catch (SQLException e) {
                 throw new IllegalStateException("Cannot connect the database!", e);
